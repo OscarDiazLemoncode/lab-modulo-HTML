@@ -53,9 +53,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid var(--primary_color);
-    & label {
-      position: relative;
-    }
+    position: relative;
   }
   & ul {
     padding: 0;
@@ -72,10 +70,12 @@ header {
   background-color: var(--secondary_color);
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 main {
   width: 80%;
   margin: 0 auto;
+  padding: 150px 0;
 }
 .nav_main li a {
   margin: 0 16px;
@@ -103,7 +103,7 @@ footer ul {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 footer ul svg {
   background-color: white;
@@ -116,9 +116,10 @@ footer ul svg {
   appearance: none;
   width: 24px;
   position: absolute;
-  left: 0;
+  top: 0;
   margin: 0;
   height: 24px;
+  cursor: pointer;
 }
 .grid_cards {
   display: grid;
@@ -130,11 +131,17 @@ footer ul svg {
     height: auto;
     display: block;
     border-radius: 16px;
+    transition: all 0.3s ease-in-out;
   }
   & .card_content {
     justify-content: space-around;
     font-size: 14px;
   }
+}
+.card img:hover {
+  transform: rotate(2deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 8px #0000001f;
 }
 .card_content {
   h2 {

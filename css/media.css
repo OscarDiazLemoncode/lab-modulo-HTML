@@ -1,1 +1,28 @@
 /* Settings media queries */
+@media (width <= 820px) {
+  nav .nav_main {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    display: none;
+
+    & li {
+      padding: 8px 0;
+    }
+  }
+  nav form {
+    flex-direction: column;
+  }
+  #checkbox_hamburguer_menu:checked nav .nav_main {
+    display: block;
+  }
+  ul.nav_footer li {
+    width: 90%;
+    border-bottom: 1px solid var(--secondary_color);
+    padding: 1rem 0;
+  }
+  input#checkbox_hamburguer_menu:checked + .nav_main {
+    display: block;
+  }
+}
