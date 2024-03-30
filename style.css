@@ -13,6 +13,19 @@
 a {
   display: block;
 }
+/* Setting classes */
+.d_flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.align_center {
+  align-items: center;
+}
+/* Setting classes*/
+
+/* testing nesting */
 /* nav {
   padding: 16px;
 }
@@ -24,12 +37,21 @@ nav ul {
 }
 nav form label {
   position: relative;
-} */
-/*  */
+} 
+nav form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}*/
+/* testing nesting */
 nav {
-  padding: 16px;
+  padding: 24px;
 
   & form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     border-bottom: 1px solid var(--primary_color);
     & label {
       position: relative;
@@ -41,6 +63,13 @@ nav {
 }
 /*  */
 
+h1 {
+  text-transform: uppercase;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+}
 .nav_main li a {
   margin: 0 16px;
   text-transform: uppercase;
@@ -52,19 +81,7 @@ nav {
 body {
   margin: 0;
 }
-/* Setting classes */
-.d_flex {
-  display: flex;
-}
-.wrap {
-  flex-wrap: wrap;
-}
-nav form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-/* Setting classes*/
+
 #checkbox_hamburguer_menu {
   appearance: none;
   width: 24px;
@@ -72,4 +89,28 @@ nav form {
   left: 0;
   margin: 0;
   height: 24px;
+}
+.grid_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 3.5rem;
+
+  & .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+  & .card_content {
+    justify-content: space-around;
+  }
+}
+.card_content {
+  h2 {
+    font-size: unset;
+    font-weight: normal;
+  }
+  p {
+    font-weight: bold;
+  }
 }
