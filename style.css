@@ -10,3 +10,34 @@
   text-decoration: none;
   color: var(--primary_color);
 }
+nav ul {
+  padding: 0;
+}
+nav ul li a {
+  display: block;
+  margin: 0 16px;
+}
+body {
+  margin: 0;
+}
+/* Setting classes */
+.d_flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+nav form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Setting classes*/
+#checkbox_hamburguer_menu {
+  appearance: none;
+  width: 24px;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  height: 24px;
+}
