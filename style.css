@@ -10,13 +10,45 @@
   text-decoration: none;
   color: var(--primary_color);
 }
+a {
+  display: block;
+}
+/* nav {
+  padding: 16px;
+}
+nav form {
+  border-bottom: 1px solid var(--primary_color);
+}
 nav ul {
   padding: 0;
 }
-nav ul li a {
-  display: block;
-  margin: 0 16px;
+nav form label {
+  position: relative;
+} */
+/*  */
+nav {
+  padding: 16px;
+
+  & form {
+    border-bottom: 1px solid var(--primary_color);
+    & label {
+      position: relative;
+    }
+  }
+  & ul {
+    padding: 0;
+  }
 }
+/*  */
+
+.nav_main li a {
+  margin: 0 16px;
+  text-transform: uppercase;
+}
+.nav_icons li a {
+  margin: 0 24px;
+}
+
 body {
   margin: 0;
 }
